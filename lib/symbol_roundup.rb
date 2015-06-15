@@ -12,3 +12,20 @@
 # Think about how you might test to see if an object's class is a Symbol.
 # You can read about Ruby symbols here:
 # http://ruby-doc.org/core-2.0.0/Symbol.html
+
+class Array
+# [:sym1, :sym2, 3, "hello", {:sym3=>:poop}, [:sym4], :sym5]
+  
+  def symbol_roundup
+    array = []
+    self.each do |sym|
+
+    if sym.class == Symbol
+    array << sym
+    end
+    end
+  array
+  end
+
+
+end
